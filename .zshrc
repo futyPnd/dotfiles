@@ -150,7 +150,6 @@ alias rmf='rm -rf'
 alias cp='cp -i'
 alias mv='mv -i'
 alias mkdir='mkdir -p'
-alias vi="vim"
 alias vz="vim ~/.zshrc"
 #Display date for 'history'
 alias his='history'
