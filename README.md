@@ -1,7 +1,7 @@
-##Overview
+## Overview
 
 Change configuration shell, tmux(etc...) for another PC.
 
-##.zshrc
+## .zshrc
 
 zsh configuration
