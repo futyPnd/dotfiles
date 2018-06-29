@@ -9,3 +9,7 @@ zsh configuration
 ## .vimrc
 
 vim configuration
+
+## .tmux.conf
+
+tmuc configuraiotn
