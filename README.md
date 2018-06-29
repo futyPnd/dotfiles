@@ -12,4 +12,4 @@ vim configuration
 
 ## .tmux.conf
 
-tmuc configuraiotn
+tmux configuraiotn
