@@ -1,16 +1,10 @@
-# 少し凝った zshrc
-# License : MIT
-# http://mollifier.mit-license.org/
- 
 ########################################
 # 環境変数
 export LANG=ja_JP.UTF-8
- 
- 
+
 # 色を使用出来るようにする
 autoload -Uz colors
 colors
- 
  
 # ヒストリの設定
 HISTFILE=~/.zsh_history
@@ -18,11 +12,7 @@ HISTSIZE=1000000
 SAVEHIST=1000000
  
 # プロンプト
-# 1行表示
-# PROMPT="%~ %# "
-# 2行表示
-#PROMPT="%{${fg[green]}%}[%n@%m]%{${reset_color}%} %~ c
-PROMPT='%K{0}%F{2}( ´･_･`)%f%F{1}[%f%F{4}%~%f%F{1}]%f%k >>> '
+PROMPT='%K{0}%F{2}( '\'-\'')ﾇｰﾝ%f%F{1}[%f%F{4}%~%f%F{1}]%f%k >>> '
  
 # 単語の区切り文字を指定する
 autoload -Uz select-word-style
@@ -50,8 +40,7 @@ zstyle ':completion:*:sudo:*' command-path /usr/local/sbin /usr/local/bin \
  
 # ps コマンドのプロセス名補完
 zstyle ':completion:*:processes' command 'ps x -o pid,s,args'
- 
- 
+
 ########################################
 # vcs_info
 autoload -Uz vcs_info
@@ -84,8 +73,9 @@ setopt ignore_eof
 # '#' 以降をコメントとして扱う
 setopt interactive_comments
  
-# ディレクトリ名だけでcdする
+# ディレクトリ名でcd、かつls -lしてくれる
 setopt auto_cd
+funtion chpwd() { ls -l }
 
 # コマンドのスペル訂正
 setopt correct
@@ -178,10 +168,10 @@ alias prev='open /Applications/Preview.app/'
 
 ###########################################
 #cdした後に自動でlaコマンドを実行してくれる
-alias cd='cdll'
-function cdll(){
-  builtin cd $1 && ls -l
-}
+#function cdls(){
+#  builtin cd $1 && ls -l
+#}
+#alias cd='cdls'
 ############################################
 
 # C で標準出力をクリップボードにコピーする

@@ -1,6 +1,6 @@
 ## Overview
 
-Change configuration shell, tmux(etc...) for another PC.
+When I want to change configuration about vim, tmux, shell (etc...), I can use this.
 
 ## .zshrc
 
@@ -12,4 +12,4 @@ vim configuration
 
 ## .tmux.conf
 
-tmux configuraiotn
+tmux configuration
