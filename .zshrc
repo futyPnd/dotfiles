@@ -1,3 +1,5 @@
+#前に使えてた設定が使えなかったりしてるし、ごちゃごちゃしてて汚いのであとでまた編集する。
+
 ########################################
 # 環境変数
 export LANG=ja_JP.UTF-8
@@ -12,7 +14,11 @@ HISTSIZE=1000000
 SAVEHIST=1000000
  
 # プロンプト
-PROMPT='%K{0}%F{2}( '\'-\'')ﾇｰﾝ%f%F{1}[%f%F{4}%~%f%F{1}]%f%k >>> '
+local dir="%F{green}[%f%F{blue}%~%f%F{green}]%f"$'\n'
+local mark="%(?,%F{blue},%F{red})>>>%f"
+local info="%F{green}( '-')＜%F{cyan}%n%f"
+
+PROMPT="%K{black} $dir$info $mark %k "
  
 # 単語の区切り文字を指定する
 autoload -Uz select-word-style
@@ -40,6 +46,9 @@ zstyle ':completion:*:sudo:*' command-path /usr/local/sbin /usr/local/bin \
  
 # ps コマンドのプロセス名補完
 zstyle ':completion:*:processes' command 'ps x -o pid,s,args'
+
+#kill の候補にも色付き表示
+zstyle ':completion:*:*:kill:*:processes' list-colors '=(#b) #([%0-9]#)*=0=01;31'
 
 ########################################
 # vcs_info
