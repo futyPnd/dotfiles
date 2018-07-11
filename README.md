@@ -1,6 +1,5 @@
 ## Overview
-
-When I want to change configuration about vim, tmux, shell (etc...), I can use this.
+To change shell or vim or tmux coufiguration for another PC.
 
 ## .zshrc
 
