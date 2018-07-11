@@ -18,7 +18,7 @@ local dir="%F{green}[%f%F{blue}%~%f%F{green}]%f"$'\n'
 local mark="%(?,%F{blue},%F{red})>>>%f"
 local info="%F{green}( '-')＜%F{cyan}%n%f"
 
-PROMPT="%K{black} $dir$info $mark %k "
+PROMPT=" $dir%K{black}$info%k $mark "
  
 # 単語の区切り文字を指定する
 autoload -Uz select-word-style
